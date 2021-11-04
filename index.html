@@ -1,1 +1,92 @@
-<b>Hello world</b>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Piglets Demo</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./assets/img/favicon.jpeg" type="image/x-icon">
+  <style>
+    .link-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .5);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="zapcount"><span id="zaps">0</span> <img class="nes-icon is-medium" src="./assets/img/zapz.png"></img> remaining</div>
+
+  <div class="link-container">
+   <a type="button" class="nes-btn is-warning" href="./game-1.html" style="  vertical-align: middle;"><i class="nes-icon coin is-small"></i> Collect Particles</a>
+   
+
+    <!-- <a class="button" href="./game-3.html">Game 3</a> -->
+        <div><a type="button" class="nes-btn is-sucess" href="./claim-reward.html">Encash and Swap <span class="nes-text is-error">soon</span> </a> </div>
+        
+          <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">
+    Connect Wallet
+  </button>
+  <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+    <div method="dialog">
+      <p class="title">Coming Soon</p>
+      <p>We are working really hard. <br>Consider following us for the meantime</br> 
+      <section class="icon-list">
+    <!-- twitter -->
+  <a href="http://twitter.com/atomicpiglets" target="_blank"><i class="nes-icon twitter is-medium" ></i></a>
+
+  <!-- facebook -->
+  <a href="https://fb.com/atomicpiglets" target="_blank"><i class="nes-icon facebook is-medium"></i> </a>
+
+  <!-- instagram -->
+  <a href="http://instagram.com/atomicpiglets" target="_blank"><i class="nes-icon instagram is-medium"></i>
+
+  <!-- medium -->
+  <a href="https://medium.com/@atomicpiglets" target="_blank"><i class="nes-icon medium is-medium"></i></a>
+
+  <!-- discord -->
+  <a href="https://discord.gg/4eK8GEt2mD" target="_blank">DISCORD</a>
+
+  <!--telegram -->
+  <a href="https://t.me/atomicpigletsgc" target="_blank">TELEGRAM</a>
+
+
+</section>
+
+
+      
+      </p>
+      <menu class="dialog-menu">
+        <button class="nes-btn" onClick="window.location.reload();">Close</button>
+      </menu>
+    </div>
+  </dialog>
+ <!--
+ <<div>Upcoming Games:</div>
+    <div><a type="button" class="nes-btn is-disabled" href="./game-2.html">Fun Oracle <span class="nes-text is-error">soon</span></a> </div>
+    
+        <div><a type="button" class="nes-btn is-disabled" href="./game-2.html">Double Your Particles <span class="nes-text is-error">soon</span> </a> </div>
+        
+        <div><a type="button" class="nes-btn is-disabled" href="./game-2.html">Player v Player <span class="nes-text is-error">soon</span> </a> </div> -->
+
+  <div id="nameoverlay" class="overlay overlay--dark hidden">
+    <div class="overlay-content">
+      <form id="username-form" class="form">
+        <input class="nes-input" type="text" name="username" id="username" placeholder="Type in your nickname" autocomplete="off" required>
+        <button class="nes-btn is-primary">ENTER</button>
+      </form>
+      </div>
+  </div>
+
+
+  <script src="./assets/js/common.js"></script>
+</body>
+</html>

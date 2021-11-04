@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Reward</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.jpeg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+    
+</head>
+<body>
+  <div class="overlay overlay--dark flex-center">
+    <form action="" class="form" id="exchange-form">
+        <h1 class="form-title">Exchange</h1>
+        <div class="exchange">
+          <div class="exchange-label">From</div>
+          <input type="number" name="" id="" class="exchange-amount"  min="0" placeholder="0">
+          <select name="" id="" class="exchange-select">
+            <option value="">Particles</option>
+            <option value="">Atomic Tokens</option>
+          </select>
+        </div>
+        <div class="exchange">
+          <div class="exchange-label">To</div>
+          <input type="number" name="" id="" class="exchange-amount" placeholder="0" min="0">
+          <select name="" id="" class="exchange-select">
+            <option value="">Particles</option>
+            <option value="">Energy</option>
+            <option value="">Atomic Tokens</option>
+          </select>
+        </div>
+
+
+  <button type="button" class="nes-btn is-primary" onclick="document.getElementById('dialog-rounded').showModal();">
+    Connect Wallet
+  </button>
+  <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+    <div method="dialog">
+      <p class="title">Coming Soon</p>
+      <p>We are working really hard. <br>Consider following us for the meantime</br> 
+      <section class="icon-list">
+  <!-- twitter -->
+  <a href="http://twitter.com/atomicpiglets" target="_blank"><i class="nes-icon twitter is-medium" ></i></a>
+
+  <!-- facebook -->
+  <a href="https://fb.com/atomicpiglets" target="_blank"><i class="nes-icon facebook is-medium"></i> </a>
+
+  <!-- instagram -->
+  <a href="http://instagram.com/atomicpiglets" target="_blank"><i class="nes-icon instagram is-medium"></i>
+
+  <!-- medium -->
+  <a href="https://medium.com/@atomicpiglets" target="_blank"><i class="nes-icon medium is-medium"></i></a>
+
+  <!-- discord -->
+  <a href="https://discord.gg/4eK8GEt2mD" target="_blank">DISCORD</a>
+
+  <!--telegram -->
+  <a href="https://t.me/atomicpigletsgc" target="_blank">TELEGRAM</a>
+
+
+</section>
+      
+      </p>
+      <menu class="dialog-menu">
+        <button class="nes-btn" onClick="window.location.reload();">Close</button>
+      </menu>
+    </div>
+  </dialog>
+
+    </form>
+  </div>
+    
+<script src="./assets/js/common.js"></script>        
+</body>
+</html>

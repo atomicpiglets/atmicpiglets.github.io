@@ -1,0 +1,21 @@
+.overlay {
+  @include absolute-full;
+
+  background-color: rgba(0, 0, 0, .3);
+  color: white;
+
+  &--dark {
+    background-color: rgba(0, 0, 0, .7);
+  }
+  &-claim {
+    animation: fade-out 0.3s ease-in-out 3s forwards;
+  }
+
+  &-content {
+    @include absolute-full;
+    @include flex-center;
+
+    animation: pop-up 0.5s ease-in-out forwards;
+  }
+
+}

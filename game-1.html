@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crumb Capture</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link href="https://unpkg.com/nes.css/css/nes.css" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="./assets/img/favicon.jpeg" type="image/x-icon">
+  <style>
+  
+      .stats {    background-color: rgb(255 255 255 / 0%); }
+      .slider {
+          border: 5px solid #fff;
+          border-radius: 0px;
+          background: linear-gradient(270deg, red 0%, yellow 100%);
+      }
+      
+       .slider::-webkit-slider-thumb {
+   background: orange;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 5px solid #000;
+  }
+  .slider::-moz-range-thumb {
+ background:orange;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 5px solid #000;
+    animation: rotate-it 0.5s ease-in-out infinite;
+  }
+  
+      @media only screen and (max-width: 600px) {
+          .rules{font-size:13px;}
+          .stats {font-size:13px;}
+          .zapcount {font-size:13px;margin-top: 5px;
+            margin-left: 20px;}
+          .nes-icon.is-medium {
+             margin-right: 16px;
+             margin-bottom: 8px;
+             transform: scale(2);}
+           .text {font-size:23px;}
+           .slider-text-container {
+             font-size: 8px;}
+            img.nes-icon.is-medium {
+                transform: scale(2.9);
+                margin-left: -10px;
+                 margin-bottom: 30px;
+}
+      }
+      
+  </style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  
+  <div class="stats stats-left">
+    <span id="score">0</span> / <span id="max-score">0</span> <i class="nes-icon coin is-medium"></i>
+  </div>
+
+
+  <div id="mute-toggle" class="mute">
+    <svg>
+      <use href="./assets/img/mute.svg#volume-up"></use>
+    </svg>
+  </div>
+
+  <div id="startscreen" class="overlay">
+    <div class="overlay-content">
+      <h1 class="title">Particle Collider</h1>
+      <p class="rules">
+          Slider will indicate the intensity and duration of the explosion. Once you start the game: Tap or Click ONCE (1) anywhere to make an explosion. If any of the particles bump into your explosion they'll explode as well, making a chain reaction. Let's see how many particles you can get.
+        </br></br>Timing is everything so CLICK wisely!
+      </p>
+      <button id="start" type="button" class="nes-btn is-success">START GAME</button>
+      <div class="slider-container">
+        <div class="slider-text-container">
+          <span class="left">Smaller range      <br> Longer Duration</span>
+          <span class="right">Wider range <br> Shorter Duration</span>
+        </div>
+        <div><img src="./assets/img/piglets.png" style="max-width: 100%;"></div>
+        <input type="range" min="10" max="100" value="10" step="10" class="slider" disabled>
+      </div>
+    </div>
+  </div>
+
+  <div id="endscreen" class="overlay hidden">
+    <div class="overlay-content">
+      <span class="text">🎉 Congratulations, <span class="username"></span>! <br> You got <span id="final-score">0</span> particles!</span>
+      <button id="restart" type="button" class="nes-btn is-success">tap more</button>
+      <div class="slider-container">
+        <div class="slider-text-container">
+          <span class="left">Smaller range <br> Longer Duration</span>
+          <span class="right">Wider range <br> Shorter Duration</span>
+        </div>
+       <div><img src="./assets/img/piglets.png" style="max-width: 100%;"></div>
+        <input type="range"  min="10" max="100" value="10" step="10" class="slider">
+      </div>
+    </div>
+
+    <div class="stats stats-right">
+      Total <br>
+      <span id="total-score"></span> <i class="nes-icon trophy is-medium"></i><br>
+      <a href="./claim-reward.html" type="button" class="nes-btn is-warning" id="claim">CLAIM NOW</a>
+    </div>
+  </div>
+
+  
+  <div class="zapcount" ><span id="zaps" >0</span> <img class="nes-icon is-medium" src="./assets/img/zapz.png"></img></div>
+
+  <script src="./assets/js/common.js"></script>
+  <script src="./assets/js/game1.js"></script>
+
+</body>
+</html>

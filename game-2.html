@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tardible Oracle</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/favicon.jpeg" type="image/x-icon">
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+
+  
+  <div id="mute-toggle" class="mute">
+    <svg>
+      <use href="./assets/img/mute.svg#volume-up"></use>
+    </svg>
+  </div>
+  
+  <div id="startscreen" class="overlay">
+    <div class="overlay-content">
+      <h1 class="title">Tardible Oracle</h1>
+      <p class="rules">
+        Ask a question in silence then Click anywhere to activate the Tardigrade Oracle. The Tardigrades bump to each other creating explosions will than decide if they AGREE or DISAGREE with you. 
+      </p>
+      <button id="start" class="button">ask oracle your question</button>
+    </div>
+  </div>
+  
+  <div id="endscreen" class="overlay hidden">
+    <div class="overlay-content">
+      <span class="text">The oracle has spoken, <span class="username"></span>.</span>
+      
+      <div class="percent-container" style="--agree: 50%">
+        <div class="percent bg-secondary"></div>
+        <div class="percent bg-accent"></div>
+        <div class="percent-text">
+          <span class=" font--big">AGREE&nbsp;<span data-percent="agree"></span>%</span>
+          <span class=" font--small"><span data-percent="disagree"></span>%&nbsp;DISAGREE</span>
+        </div>
+      </div>
+      <span class="text font--small">Congratulations! You got <span id="final-score">0</span> particles for asking.</span>
+      <button id="restart" class="button">ask oracle your question</button>
+      
+      <div class="previous-container">
+        <button class="previous-toggle">Check previous results</button>
+        <ul class="previous-list hidden">
+        </ul> 
+      </div>
+    </div>
+  </div>
+
+  <div class="zapcount"><span id="zaps">0</span> zaps remaining</div>
+    
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/game2.js"></script>
+    
+  </body>
+  </html>
